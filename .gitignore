@@ -1,0 +1,13 @@
+# Node modules
+node_modules/
+
+# Environment files (ignore all .env files except .env.example)
+.env
+.env.*
+!.env.example
+
+# VSCode settings
+.vscode/
+
+# Package lock
+package-lock.json
