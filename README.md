@@ -32,3 +32,43 @@ O projeto realiza o **download, leitura e extração automática de informaçõe
 
 ## 🏗️ Estrutura do Projeto
 
+AnalytikPay/
+├── src/
+│ ├── helpers/ # Funções utilitárias (OCR, download, upload)
+│ └── routes/ # Lógica específica de clientes
+├── .env.development # Variáveis de ambiente
+├── package.json
+├── server.js # Servidor Express
+└── README.md
+
+---
+
+## ⚡ Como Executar Localmente
+
+### 
+```bash
+1️⃣ Clonar o repositório
+git clone https://github.com/1shantm/analytikpay.git
+cd analytikpay
+2️⃣ Instalar dependências
+npm install
+3️⃣ Criar o arquivo .env.development
+PORT=3000
+GCS_BUCKET=nome-do-seu-bucket
+GOOGLE_APPLICATION_CREDENTIALS=./seguranca/chavedaGCP.json
+4️⃣ Rodar o servidor
+npm start
+O serviço estará disponível em:
+http://localhost:3000
+
+🧩 Exemplo de Requisição
+POST /analyticpay/:clientCode
+Body:
+
+json
+Copiar código
+{
+  "url": "https://exemplo.com/boleto.pdf"
+}
+
+
